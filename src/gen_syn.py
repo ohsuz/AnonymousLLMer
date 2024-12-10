@@ -104,11 +104,11 @@ for i in range(len(ranges)-1):
         results.append(result)
         
     with open(output_dir, "w") as f:
-        json.dump(results, f, indent=2)
+        json.dump(results, f, indent=2, ensure_ascii=False)
     print(f"Checkpoint saved. Total prompts: {len(results)}")
 
 
 with open(output_dir, "w") as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, ensure_ascii=False)
 
 print(f"Responses generated from {args.model_name}. Total prompts: {len(results)}")
